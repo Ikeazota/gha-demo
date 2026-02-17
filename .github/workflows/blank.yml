@@ -1,25 +1,16 @@
-name: hello world
+name: Github Action Demo
 on: push
 jobs:
-  my_gha:
+  git-actions1:
     runs-on: ubuntu-latest
     steps:
-      - name: build steps
-        run: echo Hello, ${{ vars.MY_NAME }} this is a demo build!
+      - name: checkout the code
+        uses: actions/checkout@4
         
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
+      - name: Print index file
+        run: cat index.html
   test:
     runs-on: ubuntu-latest
-    needs: my_gha
     steps:
       - name: Test phase
         run: echo "running test cases"

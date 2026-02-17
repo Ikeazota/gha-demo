@@ -29,4 +29,4 @@ jobs:
     needs: test
     steps:
       - name: Deploy the App
-        run: echo "Deploying the app"
+        run: echo "Deploying the test app"

@@ -2,10 +2,19 @@ name: Inputs Demo
 on: 
   workflow_dispatch:
     inputs :
-      enviroment: 
+      environment: 
         description: Choose environment to deploy
         required: true
         default: dev
+        type: choice
+        options:
+          - dev
+          - test
+          - Prod
+      aritifact-tag:
+        description: Choose the git tag to deploy
+        required: true
+        
 jobs:
   inputs-demo:
     runs-on: ubuntu-latest

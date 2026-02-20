@@ -1,0 +1,9 @@
+name: Or condition Demo
+on: push
+jobs:
+  orCondition-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for Hari or ikeazota
+        if: github.actor == 'Hari' || github.actor == 'ikeazota'
+        run: echo "This job runs for either Hari or ikeazota."

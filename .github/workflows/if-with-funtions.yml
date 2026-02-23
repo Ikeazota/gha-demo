@@ -37,7 +37,7 @@ jobs:
       - name: Success notification
         run: echo "Deployment to production environment was successful."
 
-  success_notify:
+  failure_notify:
     needs: ['prod_deploy', 'dev_deploy', 'QA-checks']
     if: failure()
     runs-on: ubuntu-latest

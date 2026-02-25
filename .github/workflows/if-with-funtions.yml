@@ -1,4 +1,4 @@
-name: If Demowith functions
+name: If Demo with functions
 on: 
   push:
     branches:

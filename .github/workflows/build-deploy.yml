@@ -1,13 +1,13 @@
 name: Build & Deploy
-on:
-  push:
-    branches:
-      - main
+on: workflow_dispatch
+  #push:
+    #branches:
+      #- main
       
-  pull_request:
-    types:
-      - opened
-      - synchronize
+  #pull_request:
+    #types:
+      #- opened
+      #- synchronize
 jobs:
   build:
     runs-on: ubuntu-latest

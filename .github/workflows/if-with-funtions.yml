@@ -12,10 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: perform code qulaity checks
-        if: github.ref_name == 'main'
-        run: |
-          echo "This is the main branch. Running the job."
-          exit 1
+        run: echo "Performing code quality checks for feature branch push event."
 
   dev_deploy:
     if: github.ref_name == 'develop' && github.event_name == 'push'

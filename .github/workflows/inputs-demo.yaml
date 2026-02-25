@@ -1,16 +1,11 @@
 name: Inputs Demo
-on: 
+on:
   workflow_dispatch:
-    inputs :
-      environment: 
+    inputs:
+      environment:
         description: Choose environment to deploy
         required: true
         default: dev
-        type: choice
-        options:
-          - dev
-          - test
-          - Prod
       aritifact-tag:
         description: Choose the git tag to deploy
         required: true

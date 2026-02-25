@@ -1,10 +1,7 @@
 name: If Demo
 on: 
-  push:
-    branches:
-      - main
-      - develop
-
+  workflow_dispatch:
+    # ...existing code...
 jobs:
   if-demo:
     runs-on: ubuntu-latest

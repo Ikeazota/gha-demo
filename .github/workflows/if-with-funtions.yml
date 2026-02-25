@@ -12,8 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: perform code quality checks
-        if: github.ref_name == 'feature'
-        run: echo "This is the feature branch. Running the job."
+        run: |
+          echo "This is the feature branch. Running the job."
+          exit 1
 
   dev_deploy:
     if: github.ref_name == 'develop' && github.event_name == 'push'
